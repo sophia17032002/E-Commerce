@@ -88,6 +88,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - [React Slider](https://www.npmjs.com/package/react-simple-image-slider)
 - [uuid](https://www.npmjs.com/package/uuid)
 
-## Contribution <a id="contribution"></a>
-
-This project serves as a personal portfolio website to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to contact me or submit an idea in the [discussions](https://github.com/catherineisonline/shopping-time/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
