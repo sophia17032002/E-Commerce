@@ -1,0 +1,220 @@
+.landing .hero {
+    height: 100vh;
+    position: relative;
+}
+
+.landing .hero h2 {
+    position: absolute;
+    z-index: 3;
+    font-family: var(--font-raleway);
+    top: 40%;
+    left: 60%;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-white);
+}
+
+.landing .hero h2 span {
+    color: var(--c-primary);
+}
+
+.landing .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.landing .grid .grid-one,
+.landing .grid .grid-two,
+.landing .grid .grid-three,
+.landing .grid .grid-four,
+.landing .grid .grid-five,
+.landing .grid .grid-six {
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.grid-one {
+    grid-area: 1 / 1 / 2 / 4;
+    background-image: url("../../assets/images/landing-images/gridOne.jpg");
+}
+
+.grid-two {
+    grid-area: 1 / 4 / 2 / 6;
+    background-image: url("../../assets/images/landing-images/gridTwo.jpg");
+}
+
+.grid-three {
+    grid-area: 2 / 1 / 3 / 3;
+    background-image: url("../../assets/images/landing-images/gridThree.jpg");
+}
+
+.grid-four {
+    grid-area: 2 / 3 / 3 / 6;
+    background-image: url("../../assets/images/landing-images/gridFour.jpeg");
+}
+
+.grid-five {
+    grid-area: 3 / 1 / 4 / 4;
+    background-image: url("../../assets/images/landing-images/gridFive.jpg");
+}
+
+.grid-six {
+    grid-area: 3 / 4 / 4 / 6;
+    background-image: url("../../assets/images/landing-images/gridSix.jpg");
+}
+
+.grid-one .grid-button,
+.grid-two .grid-button,
+.grid-three .grid-button,
+.grid-four .grid-button,
+.grid-five .grid-button,
+.grid-six .grid-button {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    color: black;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.grid-one .grid-button {
+    top: 85%;
+    right: 10%;
+}
+
+.grid-two .grid-button {
+    top: 85%;
+    right: 10%;
+}
+
+.grid-three .grid-button {
+    top: 85%;
+    left: 10%;
+}
+
+.grid-four .grid-button {
+    top: 85%;
+    right: 20%;
+}
+
+.grid-five .grid-button {
+    top: 85%;
+    left: 10%;
+}
+
+.grid-six .grid-button {
+    top: 85%;
+    left: 10%;
+}
+
+.grid-button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-button:before,
+.grid-button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: var(--c-text);
+    transition: all 0.3s ease;
+}
+
+.grid-button:before {
+    height: 0%;
+    width: 2px;
+}
+
+.grid-button:after {
+    width: 0%;
+    height: 2px;
+}
+
+.grid-button span:before,
+.grid-button span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: var(--c-text);
+    transition: all 0.3s ease;
+}
+
+.grid-button span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.grid-button span:after {
+    width: 0%;
+    height: 2px;
+}
+
+@media (hover: hover) {
+    .grid-one:hover,
+    .grid-two:hover,
+    .grid-three:hover,
+    .grid-four:hover,
+    .grid-five:hover,
+    .grid-six:hover {
+        opacity: 0.8;
+    }
+
+    .grid-button:hover {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .grid-button:hover:before {
+        height: 100%;
+    }
+
+    .grid-button:hover:after {
+        width: 100%;
+    }
+
+    .grid-button span:hover {
+        color: var(--c-text);
+    }
+
+    .grid-button span:hover:before {
+        height: 100%;
+    }
+
+    .grid-button span:hover:after {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .landing .hero h2 {
+        top: 60%;
+        left: 20%;
+    }
+}
